@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="HomePrices.Views.AddHomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HomePrices.ViewModels"             
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             d:DataContext="{d:DesignInstance Type=local:NCStateViewModel, IsDesignTimeCreatable=False}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <Grid>
+        <materialDesign:Card Margin="20">
+            <Grid Margin="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                
+                <TextBox
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox
+                    Grid.Row="1"
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    Text="{Binding Price, UpdateSourceTrigger=PropertyChanged}" />
+                <Button                    
+                    HorizontalAlignment="Left"
+                    Margin="0, 10"
+                    Content="_Save"
+                    Grid.Row="2"
+                    Command="{Binding SubmitCommand}" />
+            </Grid>
+        </materialDesign:Card>
+        <materialDesign:Snackbar VerticalAlignment="Bottom" MessageQueue="{Binding SnackbarMessageQueue}"/>
+    </Grid>
+</UserControl>
