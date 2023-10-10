@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Messaging;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
-using HomePrices.data;
+using Dashboard.data;
 using Moq.AutoMock.Resolvers;
 using System.Linq;
 using System.Net;

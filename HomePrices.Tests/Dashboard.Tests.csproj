@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HomePrices\HomePrices.csproj" />
+    <ProjectReference Include="..\HomePrices\Dashboard.csproj" />
   </ItemGroup>
 
   <ItemGroup>

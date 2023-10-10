@@ -1,9 +1,9 @@
-﻿using HomePrices.ViewModels;
-using HomePrices.Views;
+﻿using Dashboard.ViewModels;
+using Dashboard.Views;
 using System;
 using System.Windows.Input;
 
-namespace HomePrices;
+namespace Dashboard;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml
@@ -11,14 +11,17 @@ namespace HomePrices;
 public partial class MainWindow
 {
     public MainWindow(
+        HomesViewModel homesViewModel,
         ShowHomesViewModel showHomesViewModel,
         NCStateViewModel addHomeViewModel)
     {
         //DataContext = viewModel;
         InitializeComponent();
 
-        AddHomeView.DataContext = addHomeViewModel;
-        ShowHomesView.DataContext = showHomesViewModel;
+        //HomesViewModel.DataContext = homesViewModel;
+
+        //AddHomeView.DataContext = addHomeViewModel;
+        //ShowHomesView.DataContext = showHomesViewModel;
 
         CommandBindings.Add(new CommandBinding(ApplicationCommands.Close, OnClose));
     }

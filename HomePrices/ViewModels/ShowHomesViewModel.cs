@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
-using HomePrices.data;
+using Dashboard.data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.ObjectModel;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace HomePrices.ViewModels;
+namespace Dashboard.ViewModels;
 
 public partial class ShowHomesViewModel : ObservableObject, IRecipient<HomeUpdateMessage>
 {
@@ -38,7 +38,7 @@ public partial class ShowHomesViewModel : ObservableObject, IRecipient<HomeUpdat
 
         // TODO: This just here to simulate delay
         await Task.Delay(1_000);
-        await foreach (var home in Context.Homes.Where(x => x.PriceWeek == null).AsAsyncEnumerable())
+        await foreach (var home in Context.Homes.Where(x => x.Address == null).AsAsyncEnumerable())
         {
             Homes.Add(HomeViewModelFactory(home));
         }

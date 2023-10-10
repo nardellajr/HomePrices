@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace HomePrices.data;
+namespace Dashboard.data;
 
 public class HomePricesContext : DbContext
 {
@@ -17,7 +17,7 @@ public class HomePricesContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=HomePrices.db");
+        optionsBuilder.UseSqlite("Data Source=Dashboard.db");
         base.OnConfiguring(optionsBuilder);
     }
 }

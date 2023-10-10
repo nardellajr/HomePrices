@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Messaging;
-using HomePrices.data;
-using HomePrices.ViewModels;
+using Dashboard.data;
+using Dashboard.ViewModels;
 using MaterialDesignThemes.Wpf;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -10,7 +10,7 @@ using System;
 using System.Windows;
 using System.Windows.Threading;
 
-namespace HomePrices;
+namespace Dashboard;
 
 /// <summary>
 /// Interaction logic for App.xaml
@@ -46,6 +46,7 @@ public partial class App : Application
         {
             services.AddSingleton<MainWindow>();
             services.AddSingleton<MainWindowViewModel>();
+            services.AddSingleton<HomesViewModel>();
             services.AddSingleton<NCStateViewModel>();
             services.AddSingleton<ShowHomesViewModel>();
 

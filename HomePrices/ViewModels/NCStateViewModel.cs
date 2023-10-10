@@ -1,11 +1,11 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using HomePrices.data;
+using Dashboard.data;
 using System.Threading.Tasks;
 using System;
 using MaterialDesignThemes.Wpf;
 
-namespace HomePrices.ViewModels;
+namespace Dashboard.ViewModels;
 
 public partial class NCStateViewModel : ObservableObject
 {

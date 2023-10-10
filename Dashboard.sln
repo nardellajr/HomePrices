@@ -12,9 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Solution Items\NuGet.config = Solution Items\NuGet.config
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomePrices", "HomePrices\HomePrices.csproj", "{270B9A9C-4A3B-415A-B238-3FE1BEE3999F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dashboard", "HomePrices\Dashboard.csproj", "{270B9A9C-4A3B-415A-B238-3FE1BEE3999F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomePrices.Tests", "HomePrices.Tests\HomePrices.Tests.csproj", "{B9BF05BE-3595-42D9-BD3E-D749871B6B05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dashboard.Tests", "HomePrices.Tests\Dashboard.Tests.csproj", "{B9BF05BE-3595-42D9-BD3E-D749871B6B05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

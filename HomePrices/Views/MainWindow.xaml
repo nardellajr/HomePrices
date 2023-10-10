@@ -1,16 +1,16 @@
-﻿<Window x:Class="HomePrices.MainWindow"
+﻿<Window x:Class="Dashboard.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HomePrices" 
+        xmlns:local="clr-namespace:Dashboard" 
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
-        xmlns:views="clr-namespace:HomePrices.Views"
+        xmlns:views="clr-namespace:Dashboard.Views"
         mc:Ignorable="d"
         Topmost="True"
         d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel, IsDesignTimeCreatable=False}"
         Style="{StaticResource MaterialDesignWindow}"
-        Title="Demo App" Height="450" Width="800">
+        Title="Demo App" Height="768" Width="1024">
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto"/>
@@ -29,7 +29,7 @@
         materialDesign:ColorZoneAssist.Mode="PrimaryMid"
         Style="{StaticResource MaterialDesignNavigationRailTabControl}">
         <TabItem>
-                <TabItem.Header>
+            <TabItem.Header>
                     <StackPanel>
                         <materialDesign:PackIcon
                     Width="24"
@@ -40,18 +40,10 @@
                     HorizontalAlignment="Center"
                     Text="NC State"/>
                     </StackPanel>
-                </TabItem.Header>
-                <TextBlock>
-            <Run
-                Text="tab 1 content. Default look and behaviors." />
-            <LineBreak />
-            <LineBreak />
-            <Run
-                FontStyle="Italic">
-                This will contain a graph of the home prices in NC State
-            </Run>
-                </TextBlock>
-            </TabItem>
+            </TabItem.Header>
+            <views:HomesView x:Name="HomesView" />
+        </TabItem>
+        <!--
         <TabItem>
                 <TabItem.Header>
                     <StackPanel>
@@ -113,6 +105,7 @@
                 </TabItem.Header>
                 <views:ShowHomesView x:Name="ShowHomesView" />
             </TabItem>
+        -->
     </TabControl>
 </Grid>
 

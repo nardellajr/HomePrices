@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomePrices.Models
+namespace Dashboard.Models
 {
     internal class HousePrice
     {

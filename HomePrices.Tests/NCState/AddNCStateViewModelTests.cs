@@ -1,5 +1,5 @@
-﻿using HomePrices.data;
-using HomePrices.ViewModels;
+﻿using Dashboard.data;
+using Dashboard.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace HomePrices.Tests.NCState;

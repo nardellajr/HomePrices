@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace HomePrices.data;
+namespace Dashboard.data;
 
 public class Region
 {

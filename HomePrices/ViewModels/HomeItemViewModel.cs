@@ -1,10 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
-using HomePrices.data;
+using Dashboard.data;
 using System;
 using System.Threading.Tasks;
 
-namespace HomePrices.ViewModels;
+namespace Dashboard.ViewModels;
 
 public partial class HomeItemViewModel
 {  
@@ -29,7 +29,7 @@ public partial class HomeItemViewModel
     {
         if (await HomePricesContext.Homes.FindAsync(Id) is { } foundHomes)
         {
-            foundHomes.PriceWeek = DateTime.Now;
+            foundHomes.PriceDate = DateTime.Now;
             await HomePricesContext.SaveChangesAsync();
             Messenger.Send(new HomeUpdateMessage(foundHomes));
         }

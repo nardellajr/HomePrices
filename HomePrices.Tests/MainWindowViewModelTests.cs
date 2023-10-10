@@ -1,4 +1,4 @@
-namespace HomePrices.Tests;
+namespace Dashboard.Tests;
 
 //This attribute generates tests for MainWindowViewModel that
 //asserts all constructor arguments are checked for null

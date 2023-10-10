@@ -1,4 +1,6 @@
-﻿namespace HomePrices.Views;
+﻿using System.Windows.Controls;
+
+namespace Dashboard.Views;
 
 /// <summary>
 /// Interaction logic for AddHomeView.xaml

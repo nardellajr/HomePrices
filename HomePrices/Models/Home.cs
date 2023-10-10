@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace HomePrices.data;
+namespace Dashboard.data;
 
 public class Home
 {
@@ -11,9 +11,9 @@ public class Home
     public int? YearBuilt { get; set; }
     public int? SquareFeet { get; set; }
     public DateTime PriceDate { get; set; }    
-    public DateTime? PriceQuarter { get; set; }
-    public DateTime? PriceWeek { get; set; }
+    public int RegionId { get; set; }
 
     public List<Region> RegionList { get; set; } = new();
 
 }
+
