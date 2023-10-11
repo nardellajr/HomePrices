@@ -1,6 +1,4 @@
-﻿using System.Windows.Controls;
-
-namespace Dashboard.Views;
+﻿namespace Dashboard.Views;
 
 /// <summary>
 /// Interaction logic for HomeView.xaml
@@ -9,6 +7,6 @@ public partial class HomesView
 {
     public HomesView()
     {
-        //InitializeComponent();
+        InitializeComponent();
     }
 }

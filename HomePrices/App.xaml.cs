@@ -47,8 +47,8 @@ public partial class App : Application
             services.AddSingleton<MainWindow>();
             services.AddSingleton<MainWindowViewModel>();
             services.AddSingleton<HomesViewModel>();
-            services.AddSingleton<NCStateViewModel>();
-            services.AddSingleton<ShowHomesViewModel>();
+            //services.AddSingleton<NCStateViewModel>();
+            //services.AddSingleton<ShowHomesViewModel>();
 
             //Factory for creating HomeItemViewModels
             services.AddSingleton<Func<Home, HomeItemViewModel>>(serviceProvider =>

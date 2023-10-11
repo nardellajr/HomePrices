@@ -3,14 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Dashboard" 
+        xmlns:local="clr-namespace:Dashboard.ViewModels" 
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         xmlns:views="clr-namespace:Dashboard.Views"
         mc:Ignorable="d"
         Topmost="True"
         d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel, IsDesignTimeCreatable=False}"
         Style="{StaticResource MaterialDesignWindow}"
-        Title="Demo App" Height="768" Width="1024">
+        Title="Home Values App" Height="768" Width="1024">
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto"/>
@@ -30,16 +30,17 @@
         Style="{StaticResource MaterialDesignNavigationRailTabControl}">
         <TabItem>
             <TabItem.Header>
-                    <StackPanel>
-                        <materialDesign:PackIcon
-                    Width="24"
-                    Height="24"
-                    HorizontalAlignment="Center"
-                    Kind="Map"/>
+                <StackPanel>
+                    <materialDesign:PackIcon
+                        Width="24"
+                        Height="24"
+                        HorizontalAlignment="Center"
+                        Kind="Airballoon"/>
                         <TextBlock
-                    HorizontalAlignment="Center"
-                    Text="NC State"/>
-                    </StackPanel>
+                            HorizontalAlignment="Center"
+                            TextWrapping="Wrap"
+                            Text="Local Prices"/>
+                </StackPanel>
             </TabItem.Header>
             <views:HomesView x:Name="HomesView" />
         </TabItem>

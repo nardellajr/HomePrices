@@ -11,14 +11,17 @@ namespace Dashboard;
 public partial class MainWindow
 {
     public MainWindow(
-        HomesViewModel homesViewModel,
-        ShowHomesViewModel showHomesViewModel,
-        NCStateViewModel addHomeViewModel)
+        HomesViewModel homesViewModel
+        )
     {
+        //ShowHomesViewModel showHomesViewModel,
+        // NCStateViewModel addHomeViewModel
+
+
         //DataContext = viewModel;
         InitializeComponent();
 
-        //HomesViewModel.DataContext = homesViewModel;
+        HomesView.DataContext = homesViewModel;
 
         //AddHomeView.DataContext = addHomeViewModel;
         //ShowHomesView.DataContext = showHomesViewModel;
